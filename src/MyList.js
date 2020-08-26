@@ -28,9 +28,24 @@ import './App.css';
 import ListItem from './ListItem';
 
 class MyList extends Component {
+
+  constructor (props) {
+    super()
+    this.state = {
+      toDoItemArray: props.theList
+    }
+  }
+
+  clearList (e) {
+    //console.log('Clearing list!')
+    this.setState({
+      toDoItemArray: []
+    })
+  }
+
   render () {
-    let todoItems = this.props.theList.map((item, index) => (
-      <ListItem doThis={item} key={'todo' + index } />
+    let todoItems = this.state.toDoItemArray.map( (item, index) => (
+      <ListItem doThis={item} key={ index } />
     ))
     return (
       <div>
@@ -38,11 +53,10 @@ class MyList extends Component {
         <ul>
           {todoItems}
         </ul>
+        <button onClick={(e) => this.clearList(e)}>Finish the list!</button>
       </div>
     )
   }
 }
-
-
 
 export default MyList;
