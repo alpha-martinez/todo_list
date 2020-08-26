@@ -24,7 +24,8 @@
 // }
 
 import React, { Component } from 'react';
-import './App.css'
+import './App.css';
+import ListItem from './ListItem';
 
 class MyList extends Component {
   render () {
@@ -32,7 +33,7 @@ class MyList extends Component {
       <div>
         <h1> Things I should stop procrastinating: </h1>
         <ul>
-          <li></li>
+          <li><ListItem doThis= "Buy ice cream"/></li>
         </ul>
       </div>
     )
