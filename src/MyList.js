@@ -53,6 +53,14 @@ class MyList extends Component {
         <ul>
           {todoItems}
         </ul>
+        <form>
+          <input type="text"
+          placeholder="Type an item here"
+          onChange={(e) => this.newItemChange(e)}
+          value={this.state.newItem}
+          />
+          <button onClick={(e) => this.addItem(e)}>Add it!</button>
+        </form>
         <button onClick={(e) => this.clearList(e)}>Finish the list!</button>
       </div>
     )
