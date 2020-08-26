@@ -4,9 +4,11 @@ import './index.css';
 import MyList from './MyList';
 // import * as serviceWorker from './serviceWorker';
 
+let toDos = ["Read the javascript book", "Go for your run", "Give Oso his medicine"]
+
 ReactDOM.render(
   <React.StrictMode>
-    <MyList />
+    <MyList theList={toDos}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

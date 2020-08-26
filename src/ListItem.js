@@ -5,7 +5,9 @@ import './App.css'
 class ListItem extends Component {
     render () {
         return (
-            <li>Make the list</li>
+           <div>
+               <li>{this.props.doThis}</li>
+           </div>  
         )
     }
 }
